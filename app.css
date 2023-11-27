@@ -342,14 +342,17 @@ hr{
 }
 .mail-link:hover{
     padding: 8px;
+    border-radius: 8px;
     background: var(--states-hover, #F1F1F1);
 }
 .mail-link:active{
     padding: 8px;
+    border-radius: 8px;
     background: var(--states-pressed, #F0F0F0);
 }
 .mail-link:focus-within{
     padding: 8px;
+    border-radius: 8px;
     border: 2px solid var(--states-focused, #005BD3);
 }
 
