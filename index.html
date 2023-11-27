@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="images/android-chrome-512x512.png" type="image/x-icon">
     <link rel="stylesheet" href="app.css">
-    <script src="app.js"></script>
     <title>Merchant Dashboard</title>
 </head>
 <body>
@@ -33,13 +32,13 @@
                       </svg>
                     </a>
                 </div>
-                <div class="profile-container">
+                <div class="profile-container" onclick="toggleMenu()">
                     <a class="profile-link" href="#">
                  <div class="profile-name"> <p >Davii Collections</p> </div> <div class="profile-initial"> <p>DC</p> </div>
                 </a>
                 </div>
             </div>
-            <div class="profile-menu-wrap">
+            <div class="profile-menu-wrap" id="profileMenu">
                 <div class="profile-menu">
                     <div class="menu-one">
                         <div class="user-info">
@@ -127,5 +126,7 @@
             </div>
         </div>
     </Section>
+
+    <script src="app.js"></script>
 </body>
 </html>

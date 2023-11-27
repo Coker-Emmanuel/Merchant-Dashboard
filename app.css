@@ -148,9 +148,15 @@ textarea:focus, input:focus{
 }
 .profile-menu-wrap{
     position: absolute;
-    top: 100%;
+    top: 116%;
     right: 16px;
     width: 320px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s;
+}
+.profile-menu-wrap.open-menu{
+    max-height: 410px;
 }
 .profile-menu{
     padding: 6px 0px;
