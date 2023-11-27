@@ -152,6 +152,12 @@ textarea:focus, input:focus{
     top: 110%;
     right: 16px;
     width: 390px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.2s;
+}
+.alert-menu-wrap.open-menu{
+    max-height: 4129px;
 }
 .alert-menu{
     display: inline-flex;
@@ -183,14 +189,20 @@ textarea:focus, input:focus{
     align-items: flex-start;
     gap: 16px;
 }
+.icon-link{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
 .alert-icons-border:focus-within{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 25px;
-    height: 25px;
-    border-radius: 8px;
-    border: 2px solid var(--states-focused, #005BD3);
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    border-radius: 5px;
+    border: 1.5px solid var(--states-focused, #005BD3);
 }
 .alert-text-box{
     display: flex;
