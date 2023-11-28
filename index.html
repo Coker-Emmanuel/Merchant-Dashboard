@@ -160,6 +160,17 @@
                         </div>
                     </div>
                 </div>
+                <div class="card-one-mobile">
+                    <div class="text-exitbutton">
+                        <p class="plan-text-mobile">Extend your trial for $1/month for 3 months on select plans.</p>
+                        <div class="exit-icon-mobile">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M13.9697 15.0303C14.2626 15.3232 14.7374 15.3232 15.0303 15.0303C15.3232 14.7374 15.3232 14.2626 15.0303 13.9697L11.0607 10L15.0303 6.03033C15.3232 5.73744 15.3232 5.26256 15.0303 4.96967C14.7374 4.67678 14.2626 4.67678 13.9697 4.96967L10 8.93934L6.03033 4.96967C5.73744 4.67678 5.26256 4.67678 4.96967 4.96967C4.67678 5.26256 4.67678 5.73744 4.96967 6.03033L8.93934 10L4.96967 13.9697C4.67678 14.2626 4.67678 14.7374 4.96967 15.0303C5.26256 15.3232 5.73744 15.3232 6.03033 15.0303L10 11.0607L13.9697 15.0303Z" fill="#E3E3E3"/>
+                              </svg>
+                        </div>
+                    </div>
+                    <button class="plan-button-mobile"> <a class="plan-link-mobile" href="https://www.shopify.com/pricing" target="_blank">Select a plan</a></button>
+                </div>
                 <div class="card-two">
                     <div class="card-content">
                        <div class="guide-header">
@@ -169,34 +180,35 @@
                                 <p class="info-sub-text">Use this personalized guide to get your store up and running.</p>
                             </div>
                             <div class="guide-progress">
-                                <p class="progress-text">1/5 completed</p>
+                                <p class="progress-text" id="progressChange">0/5 completed</p>
                                 <div class="progress-bar">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="72" height="4" viewBox="0 0 72 4" fill="none">
                                         <rect width="72" height="4" rx="2" fill="#E3E3E3"/>
-                                        <rect width="18" height="4" fill="#1A1A1A"/>
+                                        <rect id="indicatorBar" class="indicator" width="0" height="4" fill="#1A1A1A"/>
                                       </svg>
                                 </div>
                             </div>
                         </div>
-                        <div class="dropdown-icon-box">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <div class="dropdown-icon-box" onclick="toggleGuide()">
+                            <a class="dropdown-link" href="#"> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M14.5303 12.2803C14.2374 12.5732 13.7626 12.5732 13.4697 12.2803L10 8.81066L6.53033 12.2803C6.23744 12.5732 5.76256 12.5732 5.46967 12.2803C5.17678 11.9874 5.17678 11.5126 5.46967 11.2197L9.46967 7.21967C9.76256 6.92678 10.2374 6.92678 10.5303 7.21967L14.5303 11.2197C14.8232 11.5126 14.8232 11.9874 14.5303 12.2803Z" fill="#4A4A4A"/>
-                              </svg>
+                                
+                              </svg></a>
                         </div>
                        </div>
-                       <div class="guide-dropdown">
+                       <div class="guide-dropdown" id="guideDropdown">
                         <ul class="guide-accordion">
-                            <li class="accordion">
+                            <li class="accordion" onclick="triggerOne()">
                                 <input type="radio" name="accordion" id="first">
-                                <div class="top-label">
+                                <div class="top-label" onclick="changeProgress()">
                                 <div class="radio-button" onclick="toggleAtwo()">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                        <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5"/>
-                                      </svg>
+                                    <svg class="circle-radio" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="transparent">
+                                      <a href="#"> <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5"/> </a>
+                                      </svg> 
                                 </div>
                                 <label for="first">Customize your online store</label>
                                 </div>
-                                <div class="content-one">
+                                <div class="content-one" id="menuOne">
                                     <div class="content-text">
                                     <p class="accordion-detail">
                                         Choose a theme and add your logo, colors, 
@@ -211,17 +223,17 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="accordion">
+                            <li class="accordion" onclick="triggerTwo()">
                                 <input type="radio" name="accordion" id="second">
-                                <div class="top-label">
-                                <div class="radio-button">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                        <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5"/>
+                                <div class="top-label" onclick="changeProgresstwo()">
+                                <div class="radio-button" onclick="toggleAthree()">
+                                    <svg class="circle-radio" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="transparent">
+                                        <a href="#"> <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5"/> </a>
                                       </svg>
                                 </div>
                                 <label for="second">Add your first product</label>
                                 </div>
-                                <div class="content-two">
+                                <div class="content-two" id="menuTwo">
                                     <div class="content-text">
                                     <p class="accordion-detail">
                                         Write a description, add photos, and set pricing for 
@@ -237,17 +249,17 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="accordion">
+                            <li class="accordion" onclick="triggerThree()">
                                 <input type="radio" name="accordion" id="third">
-                                <div class="top-label">
-                                <div class="radio-button">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                        <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5"/>
+                                <div class="top-label" onclick="changeProgressthree()">
+                                <div class="radio-button" onclick="toggleAfour()">
+                                    <svg class="circle-radio" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="transparent">
+                                        <a href="#">  <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5"/> </a>
                                       </svg>
                                 </div>
                                 <label for="third">Add a custom domain</label>
                                 </div>
-                                <div class="content-three">
+                                <div class="content-three" id="menuThree">
                                     <div class="content-text">
                                     <p class="accordion-detail">
                                         Your current domain is 222219.myshopify.com but you can add a custom 
@@ -262,17 +274,17 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="accordion">
+                            <li class="accordion" onclick="triggerFour()">
                                 <input type="radio" name="accordion" id="fourth">
-                                <div class="top-label">
-                                <div class="radio-button" >
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                        <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5"/>
+                                <div class="top-label" onclick="changeProgressfour()">
+                                <div class="radio-button" onclick="toggleAfive()">
+                                    <svg class="circle-radio" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="transparent">
+                                        <a href="#">  <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5"/> </a>
                                       </svg>
                                 </div>
                                 <label for="fourth">Name your store</label>
                                 </div>
-                                <div class="content-four">
+                                <div class="content-four" id="menuFour">
                                     <div class="content-text">
                                     <p class="accordion-detail">
                                         Your temporary store name is currently Davii collections. 
@@ -287,17 +299,17 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="accordion">
+                            <li class="accordion" onclick="triggerFive()">
                                 <input type="radio" name="accordion" id="fifth">
-                                <div class="top-label">
-                                <div class="radio-button">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                        <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5"/>
+                                <div class="top-label" onclick="changeProgressfive()">
+                                <div class="radio-button" onclick="toggleAsix()">
+                                    <svg class="circle-radio" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="transparent">
+                                        <a href="#">  <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5"/> </a>
                                       </svg>
                                 </div>
                                 <label for="fifth">Customize your online store</label>
                                 </div>
-                                <div class="content-five">
+                                <div class="content-five" id="menuFive">
                                     <div class="content-text">
                                     <p class="accordion-detail">
                                         Choose a payment provider to start accepting payments. You’ll need 
